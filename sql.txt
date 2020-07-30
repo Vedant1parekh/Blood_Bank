@@ -1,0 +1,17 @@
+﻿
+---------------------------------------************-constraints***************------------------------------------
+
+ALTER TABLE blood ADD CONSTRAINT bb CHECK(Blood_group IN ('A+','A-','B+','B-','AB+','AB-','O+','O-'));
+
+
+ALTER TABLE donor ADD CONSTRAINT d_bb CHECK(Blood_group IN ('A+','A-','B+','B-','AB+','AB-','O+','O-'));
+
+ALTER TABLE blood-bank ADD CONSTRAINT  B_b CHECK(Blood_group IN ('A+','A-','B+','B-','AB+','AB-','O+','O-'));
+
+ALTER TABLE patient ADD CONSTRAINT p_b CHECK(Blood_group IN ('A+','A-','B+','B-','AB+','AB-','O+','O-'));
+
+ALTER TABLE employee ADD CONSTRAINT E_s CHECK(Salary>0);
+
+ALTER TABLE donor ADD CONSTRAINT D_bG CHECK(Age>0 and Age<100);
+
+ALTER TABLE blood ADD CONSTRAINT Blood_gp CHECK(Cost>0);
